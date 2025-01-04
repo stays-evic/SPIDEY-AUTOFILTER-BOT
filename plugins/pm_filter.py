@@ -319,9 +319,9 @@ async def season_search(client: Client, query: CallbackQuery):
                    for file in files
               ]
    
-    btn.insert(0,[
-	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
-        ])
+#    btn.insert(0,[
+#	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+#        ])
     btn.insert(1, [
         InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"),
 	InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ", callback_data=f"seasons#{key}#{offset}#{req}"),
@@ -426,9 +426,9 @@ async def year_search(client: Client, query: CallbackQuery):
               ]
         
    
-    btn.insert(0,[
-	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
-        ])
+#    btn.insert(0,[
+#	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+#        ])
     btn.insert(1, [
         InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"),
 	InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ", callback_data=f"seasons#{key}#{offset}#{req}"),
@@ -532,9 +532,9 @@ async def quality_search(client: Client, query: CallbackQuery):
               ]
         
  
-    btn.insert(0,[
-	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
-        ])
+ #   btn.insert(0,[
+#	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+#        ])
     btn.insert(1, [
         InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
 	InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ", callback_data=f"seasons#{key}#{offset}#{req}"),
@@ -643,9 +643,9 @@ async def lang_search(client: Client, query: CallbackQuery):
               ]
         
 
-    btn.insert(0,[
-	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
-        ])
+ #   btn.insert(0,[
+#	InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+#        ])
     btn.insert(1, [
         InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
 	InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ", callback_data=f"seasons#{key}#{offset}#{req}"),
@@ -1464,28 +1464,28 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
               ]
     if offset != "":
         if total_results >= MAX_BTN:
-            btn.insert(0,[
-                InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
-            ])
-            btn.insert(1, [
+      #      btn.insert(0,[
+     #           InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+     #       ])
+            btn.insert(0, [
                 InlineKeyboardButton("ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"),
                 InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ", callback_data=f"seasons#{key}#{offset}#{req}"),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ ", callback_data=f"languages#{key}#{offset}#{req}")
             ])            
         else:
             btn.insert(0,[
-                InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+    #            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#{offset}#{req}")
             ])
             btn.insert(1,[
                 InlineKeyboardButton("🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", user_id=ADMINS[0])
             ])
     else:
-        btn.insert(0,[
-            InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
-            ])
+    #    btn.insert(0,[
+   #         InlineKeyboardButton("📥 𝗦𝗲𝗻𝗱 𝗔𝗹𝗹 𝗙𝗶𝗹𝗲𝘀 📥", callback_data=batch_link),
+   #         ])
 
-        btn.insert(1,[
+        btn.insert(0,[
             InlineKeyboardButton("🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", user_id=ADMINS[0])
         ])
                              
