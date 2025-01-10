@@ -318,7 +318,7 @@ async def start(client:Client, message):
                 InlineKeyboardButton(text="✅ Free Token ✅", url=verify),
                 InlineKeyboardButton(text="ʜᴏᴡ ᴛᴏ ɢᴇᴛ ꜰʀᴇᴇ ᴛᴏᴋᴇɴ❓", url=howtodownload)
                 ],[
-                InlineKeyboardButton(text="😁 ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ - ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴛᴏᴋᴇɴ 😁", callback_data='seeplans'),
+                InlineKeyboardButton(text="💸 ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ - ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴛᴏᴋᴇɴ 😁", callback_data='seeplans'),
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             if await db.user_verified(user_id): 
