@@ -184,9 +184,6 @@ async def start(client:Client, message):
                         buttons = [[
                             InlineKeyboardButton('☆ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
                         ],[
-                            InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data='features'),
-                            InlineKeyboardButton('Aʙᴏᴜᴛ 💌', callback_data=f'about')
-                        ],[
                             InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎟️', callback_data='seeplans'),
                             InlineKeyboardButton('Rᴇғᴇʀ 💎', callback_data="reffff")
                         ],[
@@ -212,9 +209,6 @@ async def start(client:Client, message):
     if len(message.command) != 2:
         buttons = [[
                             InlineKeyboardButton('☆ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-                        ],[
-                            InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data='features'),
-                            InlineKeyboardButton('Aʙᴏᴜᴛ 💌', callback_data=f'about')
                         ],[
                             InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎟️', callback_data='seeplans'),
                             InlineKeyboardButton('Rᴇғᴇʀ 💎', callback_data="reffff")
@@ -274,9 +268,6 @@ async def start(client:Client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
             InlineKeyboardButton('☆ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-                        ],[
-                            InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data='features'),
-                            InlineKeyboardButton('Aʙᴏᴜᴛ 💌', callback_data=f'about')
                         ],[
                             InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎟️', callback_data='seeplans'),
                             InlineKeyboardButton('Rᴇғᴇʀ 💎', callback_data="reffff")
