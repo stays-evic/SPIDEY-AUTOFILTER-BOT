@@ -81,8 +81,6 @@ async def send_movie_updates(bot, file_name, caption, file_id):
         movie_update_channel = await db.movies_update_channel_id()    
         btn = [[
             InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ ꜰɪʟᴇ ʜᴇʀᴇ 📌', url=f'https://t.me/thinkfilmy')
-        ],[
-            InlineKeyboardButton('♻️ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ♻️', url=f'https://t.me/Howtodownlaodmp4/1443')
         ]]
         reply_markup = InlineKeyboardMarkup(btn)
         if poster_url:
