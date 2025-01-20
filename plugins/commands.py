@@ -182,7 +182,7 @@ async def start(client:Client, message):
          #       newPoint = await db.get_point(refUserId)
              if AUTH_CHANNEL and await is_req_subscribed(client, message):
                         buttons = [[
-                            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ & ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ🌿', url=f'https://t.me/+nvmpM5XeI9I0NTk1')
+                            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ & ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ🌿', url=f'https://t.me/wolverine273')
                         ],[
                             InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎟️', callback_data='seeplans'),
                             InlineKeyboardButton('Rᴇғᴇʀ 💎', callback_data="reffff")
@@ -208,7 +208,7 @@ async def start(client:Client, message):
             pass
     if len(message.command) != 2:
         buttons = [[
-                            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ & ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ🌿', url=f'https://t.me/+nvmpM5XeI9I0NTk1')
+                            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ & ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ🌿', url=f'https://t.me/wolverine273')
                         ],[
                             InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎟️', callback_data='seeplans'),
                             InlineKeyboardButton('Rᴇғᴇʀ 💎', callback_data="reffff")
@@ -267,7 +267,7 @@ async def start(client:Client, message):
 
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ & ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ🌿', url=f'https://t.me/+nvmpM5XeI9I0NTk1')
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ & ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ🌿', url=f'https://t.me/wolverine273')
                         ],[
                             InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎟️', callback_data='seeplans'),
                             InlineKeyboardButton('Rᴇғᴇʀ 💎', callback_data="reffff")
