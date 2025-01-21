@@ -276,9 +276,6 @@ async def start(client:Client, message):
                             InlineKeyboardButton('Tᴏᴘ Tʀᴇɴᴅɪɴɢ 📊', callback_data="trending")
                         ]] 
         reply_markup = InlineKeyboardMarkup(button)
-        m=await message.reply_sticker("CAACAgUAAxkBAAEMvy1m1TaC8G2H7gXLgxUF4VrYyb69awAC2BMAAiT2qVYv7An51W_jpTUE")
-        await asyncio.sleep(1)
-        await m.delete()
         return await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
