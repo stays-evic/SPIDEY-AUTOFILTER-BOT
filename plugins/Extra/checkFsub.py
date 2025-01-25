@@ -22,12 +22,12 @@ async def is_user_fsub(bot , message):
             keyboard = [[join_button]]  # Create a list of lists for the InlineKeyboardMarkup
             if message.from_user:
                 k = await message.reply(
-                    f"<b>⚠ Dᴇᴀʀ Usᴇʀ {message.from_user.mention}!\n\nTᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ 🥶</b>",
+                    f"<b>⚠ Dᴇᴀʀ Usᴇʀ {message.from_user.mention}!\n\nTᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ 🥶\nयह चैनल Join करो फिर आकार Movie Search 🔍 करो..🥶</b>",
                     reply_markup=InlineKeyboardMarkup(keyboard)
                 )
             else:
                 k = await message.reply(
-                    "<b>⚠ Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ʙᴇғᴏʀᴇ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ 🥶</b>",
+                    "<b>⚠ Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ʙᴇғᴏʀᴇ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ 🥶\nयह चैनल Join करो फिर आकार Movie Search 🔍 करो 🥶</b>",
                     reply_markup=InlineKeyboardMarkup(keyboard)
                 )
             await message.delete()
