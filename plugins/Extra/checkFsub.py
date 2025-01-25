@@ -18,7 +18,7 @@ async def is_user_fsub(bot , message):
             await bot.get_chat_member(fSub , user_id)
             return True
         except UserNotParticipant:
-            join_button = InlineKeyboardButton("Join Channel", url=invite_link)
+            join_button = InlineKeyboardButton("👉 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 👈l", url=invite_link)
             keyboard = [[join_button]]  # Create a list of lists for the InlineKeyboardMarkup
             if message.from_user:
                 k = await message.reply(
