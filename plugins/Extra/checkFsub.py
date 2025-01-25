@@ -18,16 +18,16 @@ async def is_user_fsub(bot , message):
             await bot.get_chat_member(fSub , user_id)
             return True
         except UserNotParticipant:
-            join_button = InlineKeyboardButton("👉 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 👈l", url=invite_link)
+            join_button = InlineKeyboardButton("👉 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 👈", url=invite_link)
             keyboard = [[join_button]]  # Create a list of lists for the InlineKeyboardMarkup
             if message.from_user:
                 k = await message.reply(
-                    f"<b>⚠ Dᴇᴀʀ Usᴇʀ {message.from_user.mention}!\n\nTᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ 🥶\nयह चैनल Join करो फिर आकार Movie Search 🔍 करो..🥶</b>",
+                    f"<b>⚠ Dᴇᴀʀ Usᴇʀ {message.from_user.mention}!\n\nTᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ 🥶\n\nयह चैनल Join करो फिर आकार Movie Search 🔍 करो..🥶</b>",
                     reply_markup=InlineKeyboardMarkup(keyboard)
                 )
             else:
                 k = await message.reply(
-                    "<b>⚠ Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ʙᴇғᴏʀᴇ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ 🥶\nयह चैनल Join करो फिर आकार Movie Search 🔍 करो 🥶</b>",
+                    "<b>⚠ Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ʙᴇғᴏʀᴇ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs ᴛᴏ ᴛʜɪs ɢʀᴏᴜᴘ 🥶\n\nयह चैनल Join करो फिर आकार Movie Search 🔍 करो 🥶</b>",
                     reply_markup=InlineKeyboardMarkup(keyboard)
                 )
             await message.delete()
