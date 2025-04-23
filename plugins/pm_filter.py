@@ -29,7 +29,12 @@ from Jisshu.util.file_properties import get_name, get_hash, get_media_file_size
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 # ] codes add
+from shortzy import Shortzy
 
+async def get_shortlink(link): 
+    shortzy = Shortzy(api_key=SHORTENER_API, base_site=SHORTENER_WEBSITE)
+    link = await shortzy.convert(link)
+    return link
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_search(client, message):
@@ -774,18 +779,27 @@ async def cb_handler(client: Client, query: CallbackQuery):
         chat_id=LOG_CHANNEL,
         file_id=file_id
         )
-        fileName = quote_plus(get_name(log_msg))
-        online = f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}"
-        download = f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}"
+        fileName = quote_plus(get_name(log_msg)) 
+        if await db.has_premium_access(user_id): 
+          online = f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}"
+          download = f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}" 
+	else: 
+	  mode = await db.get_stream_mode()
+          if mode == "on": 
+            online = await get_shortlink(f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}")
+            download = await get_shortlink(f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}")
+	  else: 
+	    return await query.message.reply("this features available only premium users")
+		  
         btn = [[
             InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ", url=online),
             InlineKeyboardButton("ꜰᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ", url=download)
-        ],[
+          ],[
             InlineKeyboardButton('❌ ᴄʟᴏsᴇ ❌', callback_data='close_data')
 	]]
         await query.edit_message_reply_markup(
         reply_markup=InlineKeyboardMarkup(btn)
-	)
+	) 
         username = query.from_user.username
         await log_msg.reply_text(
             text=f"#LinkGenrated\n\nIᴅ : <code>{user_id}</code>\nUꜱᴇʀɴᴀᴍᴇ : {username}\n\nNᴀᴍᴇ : {fileName}",
