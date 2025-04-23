@@ -21,7 +21,7 @@ class Database:
         self.grp_and_ids = fsubs.grp_and_ids
         self.movies_update_channel = mydb.movies_update_channel
         self.botcol = mydb.botcol
-        self.stream_mode = self.db.stream_modes
+        self.stream_mode = mydb.stream_modes
 
     async def save_stream_mode(self, mode):
         await self.stream_mode.update_one(
