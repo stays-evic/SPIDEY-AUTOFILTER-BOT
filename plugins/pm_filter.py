@@ -791,7 +791,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             download = await get_shortlink(f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
         else: 
             buy_button = InlineKeyboardMarkup([[
-                InlineKeyboardButton("🔥 ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ 🔥", callback_data='plans')
+                InlineKeyboardButton("🔥 ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ 🔥", callback_data='seeplans')
             ]])
             return await query.message.reply(
                 "🔥 sᴛʀᴇᴀᴍɪɴɢ ғᴇᴀᴛᴜʀᴇ ɪꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴʟʏ ғᴏʀ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀꜱ.\n\n"
