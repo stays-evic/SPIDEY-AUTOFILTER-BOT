@@ -32,7 +32,7 @@ logger.setLevel(logging.ERROR)
 from shortzy import Shortzy
 
 async def get_shortlink(link): 
-    shortzy = Shortzy(api_key=API, base_site=URL)
+    shortzy = Shortzy(api_key=SHORTENER_API, base_site=SHORTENER_WEBSITE)
     link = await shortzy.convert(link)
     return link
 
