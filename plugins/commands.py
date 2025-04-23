@@ -1155,4 +1155,34 @@ async def reset_group_command(client, message):
     await save_group_settings(grp_id, 'caption', FILE_CAPTION)
     await save_group_settings(grp_id, 'log', LOG_VR_CHANNEL)
     await message.reply_text('ꜱᴜᴄᴄᴇꜱꜱғᴜʟʟʏ ʀᴇꜱᴇᴛ ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ...')
+
+@Client.on_message(filters.command("stream_mode") & filters.private & filters.user(ADMINS))
+async def stream_mode_command(client, message):
+    buttons = [
+        [InlineKeyboardButton("Shortlink ON", callback_data="shortlink_on")],
+        [InlineKeyboardButton("Shortlink OFF", callback_data="shortlink_off")]
+    ]
+    await message.reply(
+        "Choose stream mode for all users:",
+        reply_markup=InlineKeyboardMarkup(buttons)
+    )
+
+@Client.on_callback_query(filters.regex("shortlink_"))
+async def handle_stream_mode_callback(client, callback_query):
+    mode = callback_query.data.split("_")[-1]  # 'on' or 'off'
+    await db.save_stream_mode(mode)
+
+    await callback_query.message.edit_text(
+        f"Shortlink mode set to **{mode.upper()}** for everyone."
+    )
+    await callback_query.answer()  # dismiss button loading spinner
     
+@Client.on_message(filters.command("check_mode") & filters.private & filters.user(ADMINS))
+async def check_stream_mode(client, message):
+    mode = await db.get_stream_mode()
+    if mode == "on":
+        await message.reply("Current stream mode: **Shortlink ON**")
+    elif mode == "off":
+        await message.reply("Current stream mode: **Shortlink OFF**")
+    else:
+        await message.reply("Stream mode is not set yet.")
