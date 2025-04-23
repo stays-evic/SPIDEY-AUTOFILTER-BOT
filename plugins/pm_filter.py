@@ -8,7 +8,7 @@ from info import * #SUBSCRIPTION, PAYPICS, START_IMG, SETTINGS, URL, STICKERS_ID
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, ChatPermissions, WebAppInfo, InputMediaAnimation, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import * #FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid, ChatAdminRequired
-from utils import get_shortlink, temp, get_settings, is_check_admin, get_status, get_size, save_group_settings, is_req_subscribed, get_poster, get_status, get_readable_time , imdb , formate_file_name
+from utils import temp, get_settings, is_check_admin, get_status, get_size, save_group_settings, is_req_subscribed, get_poster, get_status, get_readable_time , imdb , formate_file_name
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_search_results, get_bad_files, get_file_details
 import random
@@ -29,7 +29,12 @@ from Jisshu.util.file_properties import get_name, get_hash, get_media_file_size
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 # ] codes add
+from shortzy import Shortzy
 
+async def get_shortlink(link): 
+    shortzy = Shortzy(api_key=API, base_site=URL)
+    link = await shortzy.convert(link)
+    return link
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_search(client, message):
