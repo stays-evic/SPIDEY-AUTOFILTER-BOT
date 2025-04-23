@@ -789,7 +789,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             online = await get_shortlink(f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
             download = await get_shortlink(f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
           else: 
-            return await query.message.reply("this features available only premium users")
+            return await query.message.reply("🔥 sᴛʀᴇᴀᴍɪɴɢ ғᴇᴀᴛᴜʀᴇ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴʟʏ ғᴏʀ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs.
+✨ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴇɴᴊᴏʏ ᴀᴅᴠᴀɴᴄᴇᴅ ғᴇᴀᴛᴜʀᴇs ᴀɴᴅ sᴍᴏᴏᴛʜ sᴛʀᴇᴀᴍɪɴɢ, ᴘʟᴇᴀsᴇ ᴘᴜʀᴄʜᴀsᴇ ᴘʀᴇᴍɪᴜᴍ ᴛᴏᴅᴀʏ!
+ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴜɴᴅᴇʀsᴛᴀɴᴅɪɴɢ! 🙏🎬🚀")
 		  
         btn = [[
             InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ", url=online),
