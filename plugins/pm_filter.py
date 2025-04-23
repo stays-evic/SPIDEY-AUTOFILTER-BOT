@@ -783,13 +783,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if await db.has_premium_access(user_id): 
           online = f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}"
           download = f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}" 
-	else: 
-	  mode = await db.get_stream_mode()
+        else: 
+          mode = await db.get_stream_mode() 
           if mode == "on": 
-            online = await get_shortlink(f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}")
-            download = await get_shortlink(f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}")
-	  else: 
-	    return await query.message.reply("this features available only premium users")
+            online = await get_shortlink(f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
+            download = await get_shortlink(f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
+          else: 
+            return await query.message.reply("this features available only premium users")
 		  
         btn = [[
             InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ", url=online),
