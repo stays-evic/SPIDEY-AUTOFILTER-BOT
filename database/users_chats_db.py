@@ -21,6 +21,20 @@ class Database:
         self.grp_and_ids = fsubs.grp_and_ids
         self.movies_update_channel = mydb.movies_update_channel
         self.botcol = mydb.botcol
+        self.stream_mode = self.db.stream_modes
+
+    async def save_stream_mode(self, mode):
+        await self.stream_mode.update_one(
+            {"_id": "stream_mode"},
+            {"$set": {"shortlink_mode": mode}},
+            upsert=True
+        )
+
+    async def get_stream_mode(self):
+        data = await self.stream_mode.find_one({"_id": "stream_mode"})
+        return data.get("shortlink_mode") if data else None
+        
+    
     def new_user(self, id, name):
         return dict(
             id = id,
