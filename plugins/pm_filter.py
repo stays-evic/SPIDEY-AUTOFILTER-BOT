@@ -780,15 +780,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         file_id=file_id
       )
       fileName = quote_plus(get_name(log_msg)) 
+      online_link = f"{URL}watch/{str(log_msg.id)}/{fileName}?hash={get_hash(log_msg)}"
+      download_link = f"{URL}{str(log_msg.id)}/{fileName}?hash={get_hash(log_msg)}" 
 
       if await db.has_premium_access(user_id): 
-        online = f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}"
-        download = f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}" 
+        online = online_link
+        download = download_link
       else: 
         mode = await db.get_stream_mode() 
         if mode == "on": 
-            online = await get_shortlink(f"{URL}watch/{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
-            download = await get_shortlink(f"{URL}{log_msg.id}/{fileName}?hash={get_hash(log_msg)}") 
+            online = await get_shortlink(online_link)
+            download = await get_shortlink(download_link)
         else: 
             buy_button = InlineKeyboardMarkup([[
                 InlineKeyboardButton("🔥 ᴘʀᴇᴍɪᴜᴍ ʙᴜʏ 🔥", callback_data='seeplans')
