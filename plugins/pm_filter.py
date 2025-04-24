@@ -780,8 +780,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         file_id=file_id
       )
       fileName = quote_plus(get_name(log_msg)) 
-      online_link = f"{URL}watch/{str(log_msg.id)}/{fileName}?hash={get_hash(log_msg)}"
-      download_link = f"{URL}{str(log_msg.id)}/{fileName}?hash={get_hash(log_msg)}" 
+      online_link = f"{URL}watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
+      download_link = f"{URL}{str(log_msg.id)}?hash={get_hash(log_msg)}" 
 
       if await db.has_premium_access(user_id): 
         online = online_link
