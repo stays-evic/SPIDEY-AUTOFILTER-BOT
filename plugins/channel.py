@@ -12,7 +12,7 @@ media_filter = filters.document | filters.video
 
 # TMDb Setup
 tmdb = TMDb()
-tmdb.api_key = 'YOUR_TMDB_API_KEY'  # Replace with your actual TMDb API key
+tmdb.api_key = '9db7743f613d4a909e42e9d3f5937c1d'  # Replace with your actual TMDb API key
 tmdb.language = 'en'
 movie = Movie()
 
