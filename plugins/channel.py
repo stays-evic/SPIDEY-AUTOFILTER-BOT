@@ -12,7 +12,7 @@ media_filter = filters.document | filters.video
 
 # TMDb Setup
 tmdb = TMDb()
-tmdb.api_key = '9db7743f613d4a909e42e9d3f5937c1d'  # Replace with your actual TMDb API key
+tmdb.api_key = 'YOUR_TMDB_API_KEY'  # Replace with your actual TMDb API key
 tmdb.language = 'en'
 movie = Movie()
 
@@ -30,24 +30,17 @@ async def media(bot, message):
 
 async def get_poster(movie_name):
     try:
-        results = movie.search(movie_name)
-        if not results:
-            return None
-        movie_id = results[0].id
-        images = movie.images(movie_id)
-        backdrops = images.get('backdrops', [])
-
-        backdrop_url = None
-        for lang in ['hi', 'en', None]:
-            for backdrop in backdrops:
-                if backdrop.get('iso_639_1') == lang:
-                    backdrop_url = f"https://image.tmdb.org/t/p/w1280{backdrop['file_path']}"
-                    break
-            if backdrop_url:
-                break
-
-        return {"poster": backdrop_url} if backdrop_url else None
-
+        for lang in ['hi', 'en']:
+            tmdb.language = lang
+            results = movie.search(movie_name)
+            if results:
+                movie_id = results[0].id
+                images = movie.images(movie_id)
+                backdrops = images.get('backdrops', [])
+                for backdrop in backdrops:
+                    if backdrop.get('file_path'):
+                        return {"poster": f"https://image.tmdb.org/t/p/w1280{backdrop['file_path']}"}
+        return None
     except Exception as e:
         print(f"TMDb Poster Fetch Error: {e}")
         return None
@@ -101,13 +94,11 @@ async def send_movie_updates(bot, file_name, caption, file_id):
         poster_data = await get_poster(movie_name)
         poster_url = poster_data.get("poster") if poster_data else None
 
-        caption_message = f"#New_File_Added ✅\n\nFile_Name:- <code>{movie_name}</code>\n\nLanguage:- {language}\n\nQuality:- {quality}" 
+        caption_message = f"#ɴᴇᴡ_ᴍᴇᴅɪᴀ ✅\n\n🫥  {movie_name} {year or ''} ⿻   | ⭐ ɪᴍᴅʙ ɪɴғᴏ\n\n🎭 ɢᴇɴʀᴇs : {language}\n\n📽 ғᴏʀᴍᴀᴛ: {quality}\n🔊 ᴀᴜᴅɪᴏ: {language if language != 'Not Idea' else 'Hindi'}\n\n#TV_SERIES" 
         search_movie = movie_name.replace(" ", '-')
         movie_update_channel = await db.movies_update_channel_id()    
         btn = [[
-            InlineKeyboardButton('📂 ɢᴇᴛ ғɪʟᴇ 📂', url=f'https://telegram.me/{temp.U_NAME}?start=getfile-{search_movie}')
-        ],[
-            InlineKeyboardButton('♻️ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ♻️', url=f'https://t.me/Howtodownload89')
+            InlineKeyboardButton("🔰𝐌𝐨𝐯𝐢𝐞𝐬 𝐒𝐞𝐚𝐫𝐜𝐡 𝐆𝐫𝐨𝐮𝐩 🔰", url="https://t.me/Strangerthing50")
         ]]
         reply_markup = InlineKeyboardMarkup(btn)
         poster_final = poster_url or "https://telegra.ph/file/88d845b4f8a024a71465d.jpg"
