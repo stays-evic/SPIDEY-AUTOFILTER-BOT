@@ -19,6 +19,7 @@ ujson
 pyshorteners 
 datetime 
 pytz 
+tmdbv3api
 dnspython==2.3.0 
 python-math 
 speedtest-cli 
