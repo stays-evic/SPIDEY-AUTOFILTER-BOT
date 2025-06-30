@@ -48,7 +48,7 @@ UPDATE_CAPTION = """<b><blockquote>📫 𝖭𝖤𝖶 𝖥𝖨𝖫𝖤 𝖠𝖣�
 <blockquote>🚀 Telegram Files ✨</blockquote>
 
 {}
-<blockquote>〽️ Powered by @Jisshu_bots</b></blockquote>
+<blockquote>〽️ Powered by @WOLVERIN_P</b></blockquote>
 """
 
 QUALITY_CAPTION = """📦 {} : {}\n"""
