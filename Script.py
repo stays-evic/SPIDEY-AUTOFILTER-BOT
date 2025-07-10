@@ -115,7 +115,7 @@ User - {}"""
 ⭐ Rating: {rating} / 10</b>
 """
 
-    FILE_CAPTION = """<b>{file_name}\n\nProvided -  「<a href="https://t.me/wolverine273">ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🌿</a>」</b>"""
+    FILE_CAPTION = """<b>{file_name}\n\nProvided -「<a href="https://t.me/wolverine273">ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🌿</a>」</b>"""
     
 
     ALRT_TXT = """ᴊᴀʟᴅɪ ʏᴇʜᴀ sᴇ ʜᴀᴛᴏ !"""
