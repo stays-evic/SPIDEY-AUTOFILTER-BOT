@@ -159,7 +159,7 @@ async def send_movie_update(bot, file_name, files):
                 QUALITY_CAPTION.format(quality, " | ".join(file_links))
             )
         quality_text = "\n".join(quality_links)
-        image_url = poster or ""
+        image_url = poster or "https://te.legra.ph/file/88d845b4f8a024a71465d.jpg"
         full_caption = UPDATE_CAPTION.format(title, language, kind, quality_text)
         movie_update_channel = await db.movies_update_channel_id()
         await bot.send_photo(
