@@ -6,7 +6,7 @@ from info import *
 
 @Client.on_message(filters.command('ban') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/JISSHU_BOTS
+    # https://t.me/ANUJVIRUS
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
