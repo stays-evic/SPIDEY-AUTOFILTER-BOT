@@ -22,7 +22,7 @@ UPDATE_CAPTION = """<b><blockquote>📫 𝖭𝖤𝖶 𝖥𝖨𝖫𝖤 𝖠𝖣�
 <blockquote>🚀 Telegram Files ✨</blockquote>
 
 {}
-<blockquote>〽️ Powered by @Jisshu_bots</b></blockquote>
+<blockquote>〽️ Powered by @ANUJVIRUS</b></blockquote>
 """
 
 QUALITY_CAPTION = """📦 {} : {}\n"""
@@ -145,7 +145,7 @@ async def get_imdb(file_name):
 async def fetch_movie_poster(title: str, year: Optional[int] = None) -> Optional[str]:
     async with aiohttp.ClientSession() as session:
         query = title.strip().replace(" ", "+")
-        url = f"https://jisshuapis.vercel.app/api.php?query={query}"
+        url = f"https://t.me/FINDERHELPBOT/api.php?query={query}"
         try:
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=5)) as res:
                 if res.status != 200:
