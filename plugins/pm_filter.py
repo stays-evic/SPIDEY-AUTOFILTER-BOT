@@ -153,7 +153,7 @@ async def admin_commands(client, query):
         chat_id=query.message.chat.id,
         message_id=query.message.id,
         media=InputMediaAnimation(
-            media="https://cdn.jsdelivr.net/gh/Jisshubot/JISSHU_BOTS/Video.mp4/Welcome_video_20240921_184741_0001.gif",
+            media="https://ibb.co/MDR86kR7",
             caption=script.ADMIN_CMD_TXT,
             parse_mode=enums.ParseMode.HTML
         ),
@@ -972,18 +972,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
 			InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer')
 		],[
 			InlineKeyboardButton('sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='source'),
-                        InlineKeyboardButton('ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs',callback_data='mydevelopers')
+                        InlineKeyboardButton('ONLY FOR YOU',callback_data='foryou')
 		],[
 			InlineKeyboardButton('⋞ ʜᴏᴍᴇ', callback_data='start')]]
                 ),
             disable_web_page_preview = True
 	)
-    elif query.data == "mydevelopers":
-        await query.answer("❤️ A Big Thank To All Contributors For Making This Bot Awesome!🎁🎪", show_alert=True)
+    elif query.data == "foryou":
+        await query.answer("❤️ A Big Thank To All FOR JOINING IN THIS BOT!🎁🎪", show_alert=True)
  
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://github.com/Jisshubot/Jisshu-filter-bot')
+            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/+7lWTaGEdKfI5ZDdl')
         ],[
             InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='about'),
             InlineKeyboardButton('• ᴄʟᴏsᴇ •', callback_data='close_data')
@@ -1018,7 +1018,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
           chat_id=query.message.chat.id,
           message_id=query.message.id,
           media=InputMediaAnimation(
-            media="https://cdn.jsdelivr.net/gh/Jisshubot/JISSHU_BOTS/Video.mp4/Group_20240921_202540_0001.gif",
+            media="https://ibb.co/MDR86kR7",
             caption=script.GROUP_TEXT.format(temp.B_LINK),
             parse_mode=enums.ParseMode.HTML
         ),
