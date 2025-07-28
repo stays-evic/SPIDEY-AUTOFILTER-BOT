@@ -341,7 +341,7 @@ async def start(client:Client, message):
                 file_size=get_size(file.file_size),
                 file_caption=file.caption
             )
-            if not await db.has_premium_access(message.from_user.id):             
+            if await db.has_premium_access(message.from_user.id):             
                 btn = [[
                     InlineKeyboardButton("🖥️ ᴘʟᴀʏ ᴏɴʟɪɴᴇ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f'stream#{file.file_id}')
                 ]]
@@ -386,7 +386,7 @@ async def start(client:Client, message):
         file_size = get_size(files.file_size),
         file_caption=files.caption
     )
-    if not await db.has_premium_access(message.from_user.id):             
+    if await db.has_premium_access(message.from_user.id):             
         btn = [[
             InlineKeyboardButton("🖥️ ᴘʟᴀʏ ᴏɴʟɪɴᴇ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f'stream#{file.file_id}')
         ]]
