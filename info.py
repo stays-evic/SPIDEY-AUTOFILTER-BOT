@@ -25,7 +25,7 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'hacker_x_official_777') # withou
 USERNAME = environ.get('USERNAME', "https://t.me/hacker_x_official_777") # ADMIN USERNAME
 
 # Database Channel 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002294764885').split()]
 
 # ForceSub Channel & Log Channels
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1001959922658'))
@@ -47,7 +47,7 @@ SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002481537934'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
 request_channel = environ.get('REQUEST_CHANNEL', '0') 
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '')) 
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002470391435')) 
 
 # Added Link Here Not Id 
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 't.me/spideyofficial777')
