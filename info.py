@@ -14,9 +14,9 @@ def is_enabled(value, default):
     
 # Main
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = int(environ.get('API_ID', '26967459'))
+API_HASH = environ.get('API_HASH', 'b71947dc4f2964519d8abdfb8b4873ac')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7527365991:AAErKCCZK_ESNVSiLaL_HmlMB20KqVCsKcQ')
 PORT = environ.get('PORT', '8082')
 
 # Owners 
@@ -28,24 +28,24 @@ USERNAME = environ.get('USERNAME', "https://t.me/hacker_x_official_777") # ADMIN
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 
 # ForceSub Channel & Log Channels
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', ''))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', ''))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '')) 
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', ''))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1001959922658'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1001959922658'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002294764885'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002294764885')) 
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002294764885'))
 
 # MongoDB 
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Spidey:spaL73XFLxZ4YiCr@cluster0.wqc5t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 
 # Files index database url
-FILES_DATABASE = environ.get('FILES_DATABASE', "")
+FILES_DATABASE = environ.get('FILES_DATABASE', "mongodb+srv://voromil970:q9aLNL7nsD8EDzwL@cluster0.rlvax.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'spideydb')
 
 # Other Channel's
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', ''))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
-request_channel = environ.get('REQUEST_CHANNEL', '') 
+request_channel = environ.get('REQUEST_CHANNEL', '0') 
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '')) 
 
@@ -59,12 +59,12 @@ TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
-SHORTENER_API = environ.get("SHORTENER_API", "fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'linkmonetizer.in')
-SHORTENER_API2 = environ.get("SHORTENER_API2", "fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'linkmonetizer.in')
-SHORTENER_API3 = environ.get("SHORTENER_API3", "fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e")
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'linkmonetizer.in')
+SHORTENER_API = environ.get("SHORTENER_API", "09c3f9bc3a8b121b1e6b82a954e59da523dd188e")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'shortxlinks.com')
+SHORTENER_API2 = environ.get("SHORTENER_API2", "fb30c8d0baba3d820e2fb4576f8ea96df7ca04da")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'api.modijiurl.com')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "682f112be1da2ffea64fd448ea803f56fb62ebaa")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'inshorturl.com')
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
 
@@ -84,7 +84,7 @@ REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
 
 
 #Other Funtions
-FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
+FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '300'))
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
 IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', False)
 IS_SEND_MOVIE_UPDATE = is_enabled('IS_SEND_MOVIE_UPDATE', False) # Don't Change It ( If You Want To Turn It On Then Turn It On By Commands) We Suggest You To Make It Turn Off If You Are Indexing Files First Time.
