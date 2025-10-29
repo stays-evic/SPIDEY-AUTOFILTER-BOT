@@ -43,14 +43,14 @@ FILES_DATABASE = environ.get('FILES_DATABASE', "mongodb+srv://voromil970:q9aLNL7
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'spideydb')
 
 # Other Channel's
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', ''))
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002481537934'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
 request_channel = environ.get('REQUEST_CHANNEL', '0') 
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '')) 
 
 # Added Link Here Not Id 
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 't.me/spideyofficial777')
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '')
 
 # Verification
@@ -59,8 +59,8 @@ TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
-SHORTENER_API = environ.get("SHORTENER_API", "09c3f9bc3a8b121b1e6b82a954e59da523dd188e")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'shortxlinks.com')
+SHORTENER_API = environ.get("SHORTENER_API", "682f112be1da2ffea64fd448ea803f56fb62ebaa")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'inshorturl.com')
 SHORTENER_API2 = environ.get("SHORTENER_API2", "fb30c8d0baba3d820e2fb4576f8ea96df7ca04da")
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'api.modijiurl.com')
 SHORTENER_API3 = environ.get("SHORTENER_API3", "682f112be1da2ffea64fd448ea803f56fb62ebaa")
